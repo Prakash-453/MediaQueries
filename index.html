@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaQueries</title>
+    <style>
+        table,td{
+            border: 2px solid red;
+            border-collapse: collapse;
+            box-shadow: 5px 10px orange,10px 20px 15px green,15px 30px 23px red;
+        }
+        .Table-1{
+            position:absolute;
+            height: 300px;
+            width: 300px;
+            top: 20px;
+            /* left: 10px; */
+        }
+
+        .Table-2{
+            position:absolute;
+            height: 400px;
+            width: 500px;
+            top: 20px;
+            left: 50px;
+        }
+
+        .Table-3{
+            position: absolute;
+            height: 450px;
+            width: 600px;
+            top: 20px; 
+            left: 60px;
+        }
+
+        @media screen and (max-width:425px){
+            .Table-2,.Table-3{
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:426px) and (max-width:768px){
+            .Table-1,.Table-3{
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:769px){
+            .Table-1,.Table-2{
+                display: none;
+            }
+        }
+
+        h2{
+            border: 2px solid green;
+            height: 30px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table class="Table-1">
+        <caption><h2>Table Layout 2x2</h2></caption>
+        <tr>
+            <td style="background-color: greenyellow;"></td>
+            <td style="background-color: gray;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: aqua;"></td>
+            <td style="background-color: green;"></td>
+        </tr>
+    </table>
+
+    <table class="Table-2">
+        <caption><h2>Table Layout 3x3</h2></caption>
+        <tr>
+            <td style="background-color: greenyellow;"></td>
+            <td style="background-color: gray;"></td>
+            <td style="background-color: brown;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: aqua;"></td>
+            <td style="background-color: green;"></td>
+            <td style="background-color: gold;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: violet;"></td>
+            <td style="background-color: goldenrod;"></td>
+            <td style="background-color: purple;"></td>
+        </tr>
+    </table>
+
+    <table class="Table-3">
+        <caption><h2>Table Layout 4x4</h2></caption>
+        <tr>
+            <td style="background-color: greenyellow;"></td>
+            <td style="background-color: gray;"></td>
+            <td style="background-color: brown;"></td>
+            <td style="background-color: palevioletred;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: aqua;"></td>
+            <td style="background-color: green;"></td>
+            <td style="background-color: gold;"></td>
+            <td style="background-color: blue;"></td>
+        </tr>
+        <tr>
+            <td style="background-color: violet;"></td>
+            <td style="background-color: goldenrod;"></td>
+            <td style="background-color: purple;"></td>
+            <td style="background-color: peru;"></td>
+        </tr>
+    </table>
+</body>
+</html>
